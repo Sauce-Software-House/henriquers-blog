@@ -2,7 +2,7 @@ const handle = "henriquerochars"
 
 const links = [
   {
-    label: "LinkedinSquare",
+    label: "Linkedin",
     url: "https://www.linkedin.com/in/henrique-rocha-serrano-73b81813b/",
   },
   {
