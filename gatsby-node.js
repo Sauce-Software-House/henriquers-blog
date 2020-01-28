@@ -22,12 +22,13 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   }
 }
 
+// To create the posts pages
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
   return graphql(
     `
-      query PostList {
+      {
         allMarkdownRemark {
           edges {
             node {
@@ -38,14 +39,15 @@ exports.createPages = ({ graphql, actions }) => {
           }
         }
       }
-    `,
-    { limit: 1000 }
+    `
   ).then(result => {
     result.data.allMarkDownRemark.edges.forEach(({ node }) => {
       createPage({
         path: node.fields.slug,
-        component: path.resolve(`src/templates/blog-post.js`),
+        component: path.resolve(`./src/templates/blog-post.js`),
         context: {
+          // Data passed to context is available
+          // in page queries as GraphQL variables
           slug: node.fields.slug,
         },
       })
