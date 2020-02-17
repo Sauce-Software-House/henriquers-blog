@@ -37,6 +37,6 @@ export default Sidebar
 
 Morbi laoreet velit sed eros tempus, quis tristique arcu tempus. Sed eu vehicula mauris. Aenean commodo metus sit amet mi porttitor, ut malesuada est tristique. Vivamus at fringilla nisi. Donec semper tristique leo, a iaculis tellus congue a. Nulla aliquam non nisl vel placerat. Aliquam posuere ligula sit amet tortor bibendum, non iaculis dui sodales.
 
-![Desert](/public/static/assets/img/desert.jpg)
+![Desert](/assets/img/desert.jpg)
 
 Integer in luctus est. Praesent ultricies feugiat urna, et rhoncus urna placerat et. Morbi ac mauris ut urna lobortis aliquet a a ipsum. Nulla commodo pretium nisl, quis gravida augue commodo mattis. Morbi posuere, lorem tincidunt laoreet fringilla, dolor lectus pharetra velit, a mattis magna purus sed tortor. Proin porttitor tortor nibh, in varius lacus sodales id. Morbi fermentum egestas vehicula. Maecenas euismod urna a consequat viverra. In sagittis ornare malesuada.
