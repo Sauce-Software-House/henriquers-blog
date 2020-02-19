@@ -1,4 +1,4 @@
-const PostQuery = `
+const postsQuery = `
   {
     posts: allMarkdownRemark(
       sort: { fields: frontmatter___date, order: DESC }
@@ -11,6 +11,7 @@ const PostQuery = `
           }
           frontmatter {
             category
+            background
             date_timestamp: date
             date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
             descripion
@@ -27,15 +28,15 @@ const flatten = arr =>
   arr.map(({ node: { frontmatter, ...rest } }) => ({
     ...frontmatter,
     date_timestamp: parseInt(
-      (newDate(frontmatter.date_timestamp).getTime() / 1000).toFixed(0)
+      (new Date(frontmatter.date_timestamp).getTime() / 1000).toFixed(0)
     ),
-    ...rest
+    ...rest,
   }))
 
 const queries = [
   {
-    query: PostQuery,
-    transformer: ({ data }) => flatten(data.posts.edges), 
+    query: postsQuery,
+    transformer: ({ data }) => flatten(data.posts.edges),
     indexName: "Posts",
     settings: {
       attributesToSnippet: ["excerpt:20"],
