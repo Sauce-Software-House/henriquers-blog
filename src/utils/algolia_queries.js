@@ -14,7 +14,7 @@ const postsQuery = `
             background
             date_timestamp: date
             date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
-            descripion
+            description
             title
           }
           excerpt(pruneLength: 5000)
