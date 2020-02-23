@@ -1,15 +1,20 @@
 import React from "react"
 import { Card } from "react-bootstrap"
+import styled from "styled-components"
 
-import Layout from "../../components/Layout"
-import SEO from "../../components/seo"
+import Layout from "../components/Layout"
+import SEO from "../components/seo"
 
-import * as S from "./styled"
+const AboutWrapper = styled.div`
+  color: var(--texts);
+  display: flex;
+  justify-content: center;
+`
 
 const AboutPage = () => (
   <Layout>
     <SEO title="About" />
-    <S.AboutWrapper>
+    <AboutWrapper>
       <Card
         style={{
           width: "25rem",
@@ -28,7 +33,7 @@ const AboutPage = () => (
           </Card.Text>
         </Card.Body>
       </Card>
-    </S.AboutWrapper>
+    </AboutWrapper>
   </Layout>
 )
 
