@@ -17,6 +17,14 @@ const links = [
     label: "Twitter",
     url: `https://twitter.com/${handle}`,
   },
+  {
+    label: "Medium",
+    url: `https://medium.com/@${handle}`,
+  },
+  {
+    label: "DevTo",
+    url: `https://dev.to/@${handle}`,
+  },
 ]
 
 export default links
