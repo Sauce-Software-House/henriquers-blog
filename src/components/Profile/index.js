@@ -9,7 +9,7 @@ import getThemeColor from "../../utils/getThemeColor"
 const Profile = () => {
   const {
     site: {
-      siteMetadata: { title, position, description },
+      siteMetadata: { title, position, description, author },
     },
   } = useStaticQuery(graphql`
     query MySiteMetadata {

@@ -26,12 +26,12 @@ const AboutPage = () => (
         <Card.Body>
           <Card.Title>A little about myself ✌🏻...</Card.Title>
           <Card.Text>
-            I worked on innovative projects that made me gain a lot of
-            experience and grow as a professional, I could learn with qualified
-            professionals in great companies, contributing from the idealization
-            of projects to the production phase. Currently focused on
-            technologies with JavaScript and TypeScript. Using React, Node and
-            ReactNative frameworks.
+            My name is Henrique Rocha Serrano. I worked on innovative projects
+            that made me gain a lot of experience and grow as a professional, I
+            could learn with qualified professionals in great companies,
+            contributing from the idealization of projects to the production
+            phase. Currently focused on technologies with JavaScript and
+            TypeScript. Using React, Node and ReactNative frameworks.
           </Card.Text>
         </Card.Body>
       </Card>
