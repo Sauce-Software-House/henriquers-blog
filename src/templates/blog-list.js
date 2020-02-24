@@ -22,13 +22,16 @@ const BlogList = props => {
       <SEO title="Home" />
       <S.ListWrapper>
         {postList.map(
-          ({
-            node: {
-              frontmatter: { background, category, date, description, title },
-              timeToRead,
-              fields: { slug },
+          (
+            {
+              node: {
+                frontmatter: { background, category, date, description, title },
+                timeToRead,
+                fields: { slug },
+              },
             },
-          }) => (
+            index
+          ) => (
             <PostItem
               slug={slug}
               title={title}
@@ -37,6 +40,7 @@ const BlogList = props => {
               date={date}
               timeToRead={timeToRead}
               description={description}
+              key={index}
             />
           )
         )}

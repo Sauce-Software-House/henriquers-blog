@@ -20,9 +20,11 @@ const AboutPage = () => (
           width: "25rem",
           background: "var(--background)",
           marginTop: "25px",
+          border: "3px solid rgba(0,0,0,.4)",
         }}
       >
         <Card.Body>
+          <Card.Title>A little about myself ✌🏻...</Card.Title>
           <Card.Text>
             I worked on innovative projects that made me gain a lot of
             experience and grow as a professional, I could learn with qualified
