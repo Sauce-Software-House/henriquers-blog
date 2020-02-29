@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 
 import { Home } from "styled-icons/boxicons-solid/Home"
+import { PersonPin } from "styled-icons/material/PersonPin"
 import { SearchAlt2 as Search } from "styled-icons/boxicons-regular/SearchAlt2"
 import { UpArrowAlt as Arrow } from "styled-icons/boxicons-regular/UpArrowAlt"
 import { Lightbulb as Light } from "styled-icons/typicons/Lightbulb"
@@ -39,6 +40,18 @@ const MenuBar = () => {
         >
           <S.MenuBarItem>
             <Home />
+          </S.MenuBarItem>
+        </S.MenuBarLink>
+        <S.MenuBarLink
+          to="/about"
+          cover
+          direction="right"
+          bg={getThemeColor()}
+          duration={0.6}
+          title="Sobre mim"
+        >
+          <S.MenuBarItem>
+            <PersonPin />
           </S.MenuBarItem>
         </S.MenuBarLink>
         <S.MenuBarLink

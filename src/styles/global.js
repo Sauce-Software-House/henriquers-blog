@@ -52,12 +52,12 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
   }
   body.dark {
-    --borders: #38444d;
+    --borders: #29a19c;
     --texts: #8899a6;
     --white: #fff;
-    --highlight: #1fa1f2;
-    --mediumBackground: #192734;
-    --background: #16202c;
+    --highlight: #a3f7bf;
+    --mediumBackground: #435055;
+    --background: #27323a;
     --postColor: #fff;
     --black: #222;
     line-height: 1;
