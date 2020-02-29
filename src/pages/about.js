@@ -1,6 +1,7 @@
 import React from "react"
 import { Card, Row, Col } from "react-bootstrap"
 import styled from "styled-components"
+import media from "styled-media-query"
 
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
@@ -15,6 +16,11 @@ const AboutWrapper = styled.div`
   justify-content: center;
   align-content: center;
 `
+const DisappearLogo = styled.div`
+  ${media.lessThan("large")`
+    display: none;
+  `}
+`
 
 const AboutPage = () => {
   return (
@@ -22,9 +28,11 @@ const AboutPage = () => {
       <SEO title="About" />
       <AboutWrapper style={{ marginBottom: "10px" }}>
         <Row style={{ alignItems: "center" }}>
-          <Col xs={6} md={4}>
-            <MyAvatar />
-          </Col>
+          <DisappearLogo>
+            <Col xs={6} md={4}>
+              <MyAvatar />
+            </Col>
+          </DisappearLogo>
           <Col xs={6} md={4}>
             <Card
               style={{
@@ -53,9 +61,11 @@ const AboutPage = () => {
       <AboutWrapper>•</AboutWrapper>
       <AboutWrapper style={{ marginTop: "10px", marginBottom: "10px" }}>
         <Row style={{ alignItems: "center" }}>
-          <Col xs={6} md={4}>
-            <PagLogo />
-          </Col>
+          <DisappearLogo>
+            <Col xs={6} md={4}>
+              <PagLogo />
+            </Col>
+          </DisappearLogo>
           <Col xs={6} md={4}>
             <Card
               style={{
@@ -68,7 +78,6 @@ const AboutPage = () => {
                 <Card.Title>
                   Dezember, 2019 - at the moment • 4 months
                 </Card.Title>
-
                 <Card.Text>
                   I work as Full Stack Developer. We are building web
                   applications for internal systems with Node / React / Redux /
@@ -85,9 +94,11 @@ const AboutPage = () => {
       <AboutWrapper>•</AboutWrapper>
       <AboutWrapper style={{ marginTop: "10px", marginBottom: "10px" }}>
         <Row style={{ alignItems: "center" }}>
-          <Col xs={6} md={4}>
-            <InflorLogo />
-          </Col>
+          <DisappearLogo>
+            <Col xs={6} md={4}>
+              <InflorLogo />
+            </Col>
+          </DisappearLogo>
           <Col xs={6} md={4}>
             <Card
               style={{
@@ -114,11 +125,13 @@ const AboutPage = () => {
       <AboutWrapper>•</AboutWrapper>
       <AboutWrapper>•</AboutWrapper>
       <AboutWrapper>•</AboutWrapper>
-      <AboutWrapper style={{ marginTop: "10px", marginBottom: "10px" }}>
+      <AboutWrapper style={{ marginTop: "10px", marginBottom: "20px" }}>
         <Row style={{ alignItems: "center" }}>
-          <Col xs={6} md={4}>
-            <TechParkLogo />
-          </Col>
+          <DisappearLogo>
+            <Col xs={6} md={4}>
+              <TechParkLogo />
+            </Col>
+          </DisappearLogo>
           <Col xs={6} md={4}>
             <Card
               style={{
