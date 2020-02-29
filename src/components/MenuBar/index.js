@@ -36,7 +36,7 @@ const MenuBar = () => {
           direction="right"
           bg={getThemeColor()}
           duration={0.6}
-          title="Voltar para Home"
+          title="Home"
         >
           <S.MenuBarItem>
             <Home />
@@ -48,7 +48,7 @@ const MenuBar = () => {
           direction="right"
           bg={getThemeColor()}
           duration={0.6}
-          title="Sobre mim"
+          title="About Me"
         >
           <S.MenuBarItem>
             <PersonPin />
@@ -60,7 +60,7 @@ const MenuBar = () => {
           direction="right"
           bg={getThemeColor()}
           duration={0.6}
-          title="Pesquisar"
+          title="Search"
         >
           <S.MenuBarItem>
             <Search />
@@ -69,7 +69,7 @@ const MenuBar = () => {
       </S.MenuBarGroup>
       <S.MenuBarGroup>
         <S.MenuBarItem
-          title="Mudar o tema"
+          title="Change Theme"
           onClick={() => {
             window.__setPreferredTheme(isDarkMode ? "light" : "dark")
           }}
@@ -78,7 +78,7 @@ const MenuBar = () => {
           <Light />
         </S.MenuBarItem>
         <S.MenuBarItem
-          title="Mudar visualização"
+          title="Change View"
           onClick={() => {
             window.__setPreferredDisplay(isListMode ? "grid" : "list")
           }}
@@ -86,7 +86,13 @@ const MenuBar = () => {
         >
           {isListMode ? <Grid /> : <List />}
         </S.MenuBarItem>
-        <S.MenuBarItem title="Ir para o topo">
+        <S.MenuBarItem
+          title="Back to Top"
+          onClick={() => {
+            document.body.scrollTop = 0
+            document.documentElement.scrollTop = 0
+          }}
+        >
           <Arrow />
         </S.MenuBarItem>
       </S.MenuBarGroup>
