@@ -6,24 +6,28 @@ import MyAvatar from "../components/Logos/MyAvatar"
 
 export const aboutContent = [
   {
+    key: 1,
     component: <MyAvatar />,
     title: "A little about myself ✌🏻...",
     text:
       "My name is Henrique Rocha Serrano. I worked on innovative projects that made me gain a lot of experience and grow as a professional, I could learn with qualified professionals in great companies, contributing from the idealization of projects to the production phase. Currently focused on technologies with JavaScript and TypeScript. Using React, Node and ReactNative frameworks.",
   },
   {
+    key: 2,
     component: <PagLogo />,
     title: "Dezember, 2019 - at the moment • 4 months",
     text:
       "I work as Full Stack Developer. We are building web applications for internal systems with Node / React / Redux / Ant Design / Less / Jest / Enzyme / Storybook / GitFlow / Trello / SCRUM.",
   },
   {
+    key: 3,
     component: <InflorLogo />,
     title: "August, 2019 - November, 2019 • 3 months",
     text:
       "I worked as Front End Delevoper, with development of responsive web systems for forest and agricultural management using Vue.js, Vue Router, Vuex , Vuetify and Sass. We also use Git Flow, JIRA and SCRUM.",
   },
   {
+    key: 4,
     component: <TechParkLogo />,
     title: "July, 2018 - August, 2019 • 1 year and 2 months",
     text:

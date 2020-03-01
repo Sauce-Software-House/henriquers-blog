@@ -20,57 +20,55 @@ const DisappearLogo = styled.div`
   `}
 `
 
+const renderAboutContent = () =>
+  aboutContent.map((item, index) => (
+    <div key={index}>
+      <AboutWrapper
+        style={{
+          marginBottom: aboutContent.length === index + 1 ? "20px" : "10px",
+          marginTop: index === 0 ? "20px" : "10px",
+        }}
+      >
+        <Row style={{ alignItems: "center" }}>
+          <DisappearLogo>
+            <Col xs={6} md={4}>
+              {item.component}
+            </Col>
+          </DisappearLogo>
+          <Col xs={6} md={4}>
+            <Card
+              style={{
+                width: "20rem",
+                background: "var(--background)",
+                border: "3px solid rgba(0,0,0,.4)",
+              }}
+            >
+              <Card.Body>
+                <Card.Title style={{ fontSize: "1.1rem", fontWeight: "600" }}>
+                  {item.title}
+                </Card.Title>
+                <Card.Text>{item.text}</Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
+      </AboutWrapper>
+      {index === 0 && <AboutWrapper key={index}>•</AboutWrapper>}
+      {index !== 0 && aboutContent.length !== index + 1 && (
+        <>
+          <AboutWrapper>•</AboutWrapper>
+          <AboutWrapper>•</AboutWrapper>
+          <AboutWrapper>•</AboutWrapper>
+        </>
+      )}
+    </div>
+  ))
+
 const AboutPage = () => {
   return (
     <Layout>
       <SEO title="About" />
-      {aboutContent.map((item, index) => {
-        return (
-          <>
-            <AboutWrapper
-              style={{
-                marginBottom: "10px",
-                marginTop: "10px",
-              }}
-              key={index}
-            >
-              <Row style={{ alignItems: "center" }}>
-                <DisappearLogo>
-                  <Col xs={6} md={4}>
-                    {item.component}
-                  </Col>
-                </DisappearLogo>
-                <Col xs={6} md={4}>
-                  <Card
-                    style={{
-                      width: "20rem",
-                      background: "var(--background)",
-                      border: "3px solid rgba(0,0,0,.4)",
-                    }}
-                  >
-                    <Card.Body>
-                      <Card.Title
-                        style={{ fontSize: "1.1rem", fontWeight: "600" }}
-                      >
-                        {item.title}
-                      </Card.Title>
-                      <Card.Text>{item.text}</Card.Text>
-                    </Card.Body>
-                  </Card>
-                </Col>
-              </Row>
-            </AboutWrapper>
-            {index === 0 && <AboutWrapper>•</AboutWrapper>}
-            {index !== 0 && aboutContent.length !== index + 1 && (
-              <>
-                <AboutWrapper>•</AboutWrapper>
-                <AboutWrapper>•</AboutWrapper>
-                <AboutWrapper>•</AboutWrapper>
-              </>
-            )}
-          </>
-        )
-      })}
+      {renderAboutContent()}
     </Layout>
   )
 }
