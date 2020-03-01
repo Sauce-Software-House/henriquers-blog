@@ -49,7 +49,9 @@ const AboutPage = () => {
                     }}
                   >
                     <Card.Body>
-                      <Card.Title>{item.title}</Card.Title>
+                      <Card.Title style={{ fontSize: "1.1rem" }}>
+                        {item.title}
+                      </Card.Title>
                       <Card.Text>{item.text}</Card.Text>
                     </Card.Body>
                   </Card>
