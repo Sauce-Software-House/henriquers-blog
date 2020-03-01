@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react"
+import * as Scroll from "react-scroll"
 
 import { Home } from "styled-icons/boxicons-solid/Home"
 import { PersonPin } from "styled-icons/material/PersonPin"
@@ -11,6 +12,11 @@ import { ThList as List } from "styled-icons/typicons/ThList"
 import getThemeColor from "../../utils/getThemeColor"
 
 import * as S from "./styled"
+
+var scroll = Scroll.animateScroll
+const scrollToTop = () => {
+  scroll.scrollToTop()
+}
 
 const MenuBar = () => {
   const [theme, setTheme] = useState(null)
@@ -86,13 +92,7 @@ const MenuBar = () => {
         >
           {isListMode ? <Grid /> : <List />}
         </S.MenuBarItem>
-        <S.MenuBarItem
-          title="Back to Top"
-          onClick={() => {
-            document.body.scrollTop = 0
-            document.documentElement.scrollTop = 0
-          }}
-        >
+        <S.MenuBarItem title="Back to Top" onClick={() => scrollToTop()}>
           <Arrow />
         </S.MenuBarItem>
       </S.MenuBarGroup>
