@@ -43,13 +43,15 @@ const AboutPage = () => {
                 <Col xs={6} md={4}>
                   <Card
                     style={{
-                      width: "25rem",
+                      width: "20rem",
                       background: "var(--background)",
                       border: "3px solid rgba(0,0,0,.4)",
                     }}
                   >
                     <Card.Body>
-                      <Card.Title style={{ fontSize: "1.1rem" }}>
+                      <Card.Title
+                        style={{ fontSize: "1.1rem", fontWeight: "600" }}
+                      >
                         {item.title}
                       </Card.Title>
                       <Card.Text>{item.text}</Card.Text>
