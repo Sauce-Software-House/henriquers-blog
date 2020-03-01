@@ -26,6 +26,7 @@ export const RecommendedLink = styled(AniLink)`
   width: 50%;
   &:hover {
     background: var(--borders);
+    color: var(--white);
   }
   &.previous {
     border-right: 1px solid var(--borders);
