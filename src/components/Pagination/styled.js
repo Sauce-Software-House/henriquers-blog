@@ -21,6 +21,7 @@ export const PaginationWrapper = styled.section`
 
     &:hover {
       color: var(--highlight);
+      text-decoration: none;
     }
   }
 `

@@ -26,5 +26,6 @@ export const MenuLinksLink = styled(AniLink)`
 
   &:hover {
     color: var(--highlight);
+    text-decoration: none;
   }
 `

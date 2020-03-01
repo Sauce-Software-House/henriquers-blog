@@ -19,6 +19,7 @@ export const ProfileLink = styled(AniLink)`
 
   &:hover {
     color: var(--highlight);
+    text-decoration: none;
   }
 `
 export const ProfileAuthor = styled.h1`

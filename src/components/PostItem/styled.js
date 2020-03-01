@@ -9,6 +9,7 @@ export const PostItemLink = styled(AniLink)`
 
   &:hover {
     color: var(--highlight);
+    text-decoration: none;
   }
 
   body#grid & {
