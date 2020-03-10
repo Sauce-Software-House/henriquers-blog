@@ -2,7 +2,7 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
-const queries = require("./src/utils/algolia_queries")
+// const queries = require("./src/utils/algolia_queries")
 
 module.exports = {
   siteMetadata: {
@@ -57,17 +57,17 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-algolia-search`,
-      options: {
-        appId: process.env.GATSBY_ALGOLIA_APP_ID,
-        apiKey: process.env.ALGOLIA_ADMIN_KEY,
-        indexName: process.env.GATSBY_ALGOLIA_INDEX_NAME,
-        queries,
-        chunkSize: 10000,
-        enablePartialUpdates: true,
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-algolia-search`,
+    //   options: {
+    //     appId: process.env.GATSBY_ALGOLIA_APP_ID,
+    //     apiKey: process.env.ALGOLIA_ADMIN_KEY,
+    //     indexName: process.env.GATSBY_ALGOLIA_INDEX_NAME,
+    //     queries,
+    //     chunkSize: 10000,
+    //     enablePartialUpdates: true,
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
