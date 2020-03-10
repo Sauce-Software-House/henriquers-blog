@@ -21,29 +21,36 @@ const BlogList = props => {
     <Layout>
       <SEO title="Home" />
       <S.ListWrapper>
-        {postList.map(
-          (
-            {
-              node: {
-                frontmatter: { background, category, date, description, title },
-                timeToRead,
-                fields: { slug },
+        {postList.length > 0 &&
+          postList.map(
+            (
+              {
+                node: {
+                  frontmatter: {
+                    background,
+                    category,
+                    date,
+                    description,
+                    title,
+                  },
+                  timeToRead,
+                  fields: { slug },
+                },
               },
-            },
-            index
-          ) => (
-            <PostItem
-              slug={slug}
-              title={title}
-              background={background}
-              category={category}
-              date={date}
-              timeToRead={timeToRead}
-              description={description}
-              key={index}
-            />
-          )
-        )}
+              index
+            ) => (
+              <PostItem
+                slug={slug}
+                title={title}
+                background={background}
+                category={category}
+                date={date}
+                timeToRead={timeToRead}
+                description={description}
+                key={index}
+              />
+            )
+          )}
       </S.ListWrapper>
       <Pagination
         isFirst={isFirst}
