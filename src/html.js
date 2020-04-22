@@ -1,8 +1,13 @@
-import React from "react"
+import React, { useEffect } from "react"
 import PropTypes from "prop-types"
 import "bootstrap/dist/css/bootstrap.min.css"
+import { initGA } from "./config/ga"
 
 export default function HTML(props) {
+  useEffect(() => {
+    initGA()
+  }, [])
+
   return (
     <html {...props.htmlAttributes}>
       <head>
