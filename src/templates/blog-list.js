@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { graphql } from "gatsby"
 
 import Layout from "../components/Layout"
@@ -8,7 +8,13 @@ import Pagination from "../components/Pagination"
 
 import * as S from "../components/ListWrapper/styled"
 
+import { initGA } from "../config/ga"
+
 const BlogList = props => {
+  useEffect(() => {
+    initGA()
+  }, [])
+
   const postList = props.data.allMarkdownRemark.edges
 
   let { currentPage, numPages } = props.pageContext
