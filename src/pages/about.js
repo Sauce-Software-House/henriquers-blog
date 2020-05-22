@@ -3,6 +3,9 @@ import { Card, Row, Col } from "react-bootstrap"
 import styled from "styled-components"
 import media from "styled-media-query"
 
+import Particles from "react-particles-js"
+import { configParticles } from "../config/config-particles"
+
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
 
@@ -16,58 +19,88 @@ const AboutWrapper = styled.div`
 `
 const DisappearLogo = styled.div`
   ${media.lessThan("large")`
-    display: none;
+    /* display: none; */
+  `}
+`
+const ResponsiveRow = styled(Row)`
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  ${media.lessThan("large")`
+    flex-direction: column;
   `}
 `
 
 const renderAboutContent = () =>
   aboutContent.map((item, index) => (
     <div key={index}>
-      <AboutWrapper
+      <ResponsiveRow
         style={{
-          marginBottom: aboutContent.length === index + 1 ? "20px" : "10px",
-          marginTop: index === 0 ? "20px" : "10px",
+          marginTop: index === 0 ? "30px" : "0px",
         }}
       >
-        <Row style={{ alignItems: "center" }}>
-          <DisappearLogo>
-            <Col xs={6} md={4}>
-              {item.component}
-            </Col>
-          </DisappearLogo>
+        <DisappearLogo>
           <Col xs={6} md={4}>
-            <Card
-              style={{
-                width: "20rem",
-                background: "var(--background)",
-                border: "3px solid rgba(0,0,0,.4)",
-              }}
-            >
-              <Card.Body>
-                <Card.Title style={{ fontSize: "1.1rem", fontWeight: "600" }}>
-                  {item.title}
-                </Card.Title>
-                <Card.Text>{item.text}</Card.Text>
-              </Card.Body>
-            </Card>
+            {item.component}
           </Col>
-        </Row>
-      </AboutWrapper>
-      {index === 0 && <AboutWrapper key={index}>•</AboutWrapper>}
+        </DisappearLogo>
+        <Col xs={10} md={8}>
+          <Card
+            style={{
+              maxWidth: "200rem",
+              background: "var(--cardBackground)",
+              border: "3px solid var(--cardBorder)",
+              color: "var(--texts)",
+            }}
+          >
+            <Card.Body>
+              <Card.Title style={{ fontSize: "1.1rem", fontWeight: "600" }}>
+                {item.title}
+              </Card.Title>
+              <Card.Text>{item.text}</Card.Text>
+            </Card.Body>
+          </Card>
+        </Col>
+      </ResponsiveRow>
+      {index === 0 && (
+        <AboutWrapper
+          key={index}
+          style={{ color: "var(--point)", fontSize: "25px" }}
+        >
+          •
+        </AboutWrapper>
+      )}
       {index !== 0 && aboutContent.length !== index + 1 && (
         <>
-          <AboutWrapper>•</AboutWrapper>
-          <AboutWrapper>•</AboutWrapper>
-          <AboutWrapper>•</AboutWrapper>
+          <AboutWrapper style={{ color: "var(--point)", fontSize: "25px" }}>
+            •
+          </AboutWrapper>
+          <AboutWrapper style={{ color: "var(--point)", fontSize: "25px" }}>
+            •
+          </AboutWrapper>
+          <AboutWrapper style={{ color: "var(--point)", fontSize: "25px" }}>
+            •
+          </AboutWrapper>
         </>
       )}
     </div>
   ))
 
 const AboutPage = () => {
+  const particlesBackground = window.__theme === "dark" ? "#000" : "#888"
+  console.log(particlesBackground)
+
   return (
     <Layout>
       <SEO title="About" />
+      <Particles
+        style={{
+          position: "absolute",
+          zIndex: 0,
+          animation: "fadein 52s",
+        }}
+        params={configParticles}
+      />
       {renderAboutContent()}
     </Layout>
   )

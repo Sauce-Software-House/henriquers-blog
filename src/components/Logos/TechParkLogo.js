@@ -6,14 +6,16 @@ import styled from "styled-components"
 
 const AvatarWrapper = styled(Img)`
   border-radius: 25%;
-  height: 3.75rem;
+  height: 4.75rem;
   margin: auto;
-  width: 3.75rem;
+  width: 4.75rem;
   background: #fff;
 
   ${media.lessThan("large")`
-  height: 1.875rem;
-  width: 1.875rem;
+    height: 4.875rem;
+    width: 4.875rem;
+    margin-top: 2px;
+    margin-bottom: 10px;
   `}
 `
 const InflorLogo = () => {
@@ -22,7 +24,7 @@ const InflorLogo = () => {
       query {
         avatarImage: file(relativePath: { eq: "techpark.png" }) {
           childImageSharp {
-            fluid(maxWidth: 60) {
+            fluid(maxWidth: 100) {
               ...GatsbyImageSharpFluid
             }
           }

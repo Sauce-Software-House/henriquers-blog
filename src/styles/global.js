@@ -60,19 +60,25 @@ const GlobalStyles = createGlobalStyle`
     --background: #27323a;
     --postColor: #fff;
     --black: #222;
+    --cardBackground: rgba(0,0,0,.5);
+    --cardBorder: rgba(0,0,0,.4);
+    --point: rgba(0,0,0,.5);
     line-height: 1;
     font-size: 100%;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   }
   body.light {
-    --borders: #dedede;
+    --borders: #555555;
     --postColor: #111;
     --texts: #555555;
     --highlight: #1fa1f2;
     --mediumBackground: #f0f0f3;
-    --background: #fff;
+    --background: #dedede;
     --white: #fff;
     --black: #222;
+    --cardBackground: rgba(0,0,0,.1);
+    --cardBorder: rgba(0,0,0,.1);
+    --point: rgba(0,0,0,.5);
     line-height: 1;
     font-size: 100%;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
