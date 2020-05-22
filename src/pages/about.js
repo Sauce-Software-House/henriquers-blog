@@ -17,11 +17,7 @@ const AboutWrapper = styled.div`
   justify-content: center;
   align-content: center;
 `
-const DisappearLogo = styled.div`
-  ${media.lessThan("large")`
-    /* display: none; */
-  `}
-`
+
 const ResponsiveRow = styled(Row)`
   align-items: center;
   display: flex;
@@ -37,13 +33,14 @@ const renderAboutContent = () =>
       <ResponsiveRow
         style={{
           marginTop: index === 0 ? "30px" : "0px",
+          marginBottom: aboutContent.length === index + 1 ? "30px" : "0px",
         }}
       >
-        <DisappearLogo>
+        <div>
           <Col xs={6} md={4}>
             {item.component}
           </Col>
-        </DisappearLogo>
+        </div>
         <Col xs={10} md={8}>
           <Card
             style={{
@@ -86,24 +83,19 @@ const renderAboutContent = () =>
     </div>
   ))
 
-const AboutPage = () => {
-  const particlesBackground = window.__theme === "dark" ? "#000" : "#888"
-  console.log(particlesBackground)
-
-  return (
-    <Layout>
-      <SEO title="About" />
-      <Particles
-        style={{
-          position: "absolute",
-          zIndex: 0,
-          animation: "fadein 52s",
-        }}
-        params={configParticles}
-      />
-      {renderAboutContent()}
-    </Layout>
-  )
-}
+const AboutPage = () => (
+  <Layout>
+    <SEO title="About" />
+    <Particles
+      style={{
+        position: "absolute",
+        zIndex: 0,
+        animation: "fadein 52s",
+      }}
+      params={configParticles}
+    />
+    {renderAboutContent()}
+  </Layout>
+)
 
 export default AboutPage

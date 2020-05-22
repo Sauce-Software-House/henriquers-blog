@@ -6,8 +6,8 @@ import styled from "styled-components"
 
 const AvatarWrapper = styled(Img)`
   border-radius: 25%;
-  height: 4.75rem;
   margin: auto;
+  height: 4.75rem;
   width: 4.75rem;
   background: #fff;
 
