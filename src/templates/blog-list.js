@@ -1,4 +1,5 @@
 import React, { useEffect } from "react"
+import { navigate } from "gatsby"
 import { graphql } from "gatsby"
 
 import Layout from "../components/Layout"
@@ -8,11 +9,12 @@ import Pagination from "../components/Pagination"
 
 import * as S from "../components/ListWrapper/styled"
 
-import { initGA } from "../config/ga"
+// import { initGA } from "../config/ga"
 
 const BlogList = props => {
   useEffect(() => {
-    initGA()
+    navigate("/about/")
+    // initGA()
   }, [])
 
   const postList = props.data.allMarkdownRemark.edges
