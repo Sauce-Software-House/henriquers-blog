@@ -10,7 +10,7 @@ export const aboutContent = [
     component: <MyAvatar />,
     title: "A little about myself ✌🏻...",
     text:
-      "My name is Henrique Rocha Serrano. I worked on innovative projects that made me gain a lot of experience and grow as a professional, I could learn with qualified professionals in great companies, contributing from the idealization of projects to the production phase. Currently focused on technologies with JavaScript and TypeScript. Using React, Node and ReactNative frameworks.",
+      "My name is Henrique Rocha Serrano. I worked on innovative projects that made me gain a lot of experience and grow as a professional, I could learn with qualified professionals in great companies, contributing from the idealization of projects to the production phase. Currently focused on technologies with JavaScript and TypeScript. Using React, Node and ReactNative frameworks. My hobbies are studying game development, mainly with the Phaser structure and creating pixel art :D",
   },
   {
     key: 2,
