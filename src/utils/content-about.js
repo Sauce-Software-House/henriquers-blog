@@ -15,7 +15,7 @@ export const aboutContent = [
   {
     key: 2,
     component: <PagLogo />,
-    title: "Dezember, 2019 - at the moment • 4 months",
+    title: "Dezember, 2019 - at the moment • 6 months",
     text:
       "I work as Full Stack Developer. We are building web applications for internal systems with Node / React / Redux / Ant Design / Less / Jest / Enzyme / Storybook / GitFlow / Trello / SCRUM.",
   },
