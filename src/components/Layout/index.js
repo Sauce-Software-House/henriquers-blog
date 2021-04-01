@@ -10,7 +10,7 @@ import * as S from "./styled"
 
 const Layout = ({ children }) => {
   return (
-    <S.LayoutWrapper>
+    <S.LayoutWrapper >
       <GlobalStyles />
       <TransitionPortal level="top">
         <Sidebar />

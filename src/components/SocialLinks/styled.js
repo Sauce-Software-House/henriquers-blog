@@ -2,12 +2,13 @@ import styled from "styled-components"
 import media from "styled-media-query"
 
 export const SocialLinksWrapper = styled.nav`
+  ${props => !props.deskDisplay && `display: none;` };
   margin: 2rem auto;
   width: 100%;
 
   ${media.lessThan("large")`
-    display: none;
-  `}
+    display: ${props => props.cellDisplay ? 'inline' : 'none'};
+ `}
 `
 
 export const SocialLinksList = styled.ul`

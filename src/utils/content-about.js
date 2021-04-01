@@ -1,5 +1,6 @@
 import React from "react"
 import PagLogo from "../components/Logos/PagLogo"
+import WillLogo from "../components/Logos/WillLogo"
 import InflorLogo from "../components/Logos/InflorLogo"
 import TechParkLogo from "../components/Logos/TechParkLogo"
 import MyAvatar from "../components/Logos/MyAvatar"
@@ -14,23 +15,31 @@ export const aboutContent = [
   },
   {
     key: 2,
-    component: <PagLogo />,
-    title: "Dezember, 2019 - at the moment • 6 months",
+    component: <WillLogo />,
+    title: "Dezember, 2019 - April, 2021 • 1 year and 5 months",
     text:
-      "I work as Full Stack Developer. We are building web applications for internal systems with Node / React / Redux / Ant Design / Less / Jest / Enzyme / Storybook / GitFlow / Trello / SCRUM.",
+      "Will bank is a fintech created by pag! I work as a Full Stack Engineer, we are building web applications for internal systems (backoffice) with React / Node / NestJS / Redux / Ant Design / TypeScript / Less / Jest / Enzyme / Storybook / GitFlow / Jira / SCRUM. I also participate in the maintenance of internal systems using the Java ecosystem, mainly with Spring Framework. I also worked on the development of the banking application, using Flutter. \n" +
+      "\nCurrently my focus is on creating new features and maintaining our new internal system. In which I participated in the entire development phase. Using React and NestJS.",
   },
   {
     key: 3,
-    component: <InflorLogo />,
-    title: "August, 2019 - November, 2019 • 3 months",
+    component: <PagLogo />,
+    title: "Dezember, 2019 - September, 2020 • 10 months",
     text:
-      "I worked as Front End Delevoper, with development of responsive web systems for forest and agricultural management using Vue.js, Vue Router, Vuex , Vuetify and Sass. We also use Git Flow, JIRA and SCRUM.",
+      "I worked as a Full Stack Developer, we build web applications for internal systems with React / Node / NestJS / Redux / Ant Design / TypeScript / Less / Jest / Enzyme / Storybook / GitFlow / Jira / SCRUM. I also participate in the maintenance of internal systems using the Java ecosystem, mainly with Spring Framework. I also worked on the development of the banking application, using Flutter.",
   },
   {
     key: 4,
+    component: <InflorLogo />,
+    title: "August, 2019 - November, 2019 • 4 months",
+    text:
+      "I worked as a Front-end Developer with development of responsive web systems for forest and agricultural management using Vue.js, Vue Router, Vuex , Vuetify and Sass. We also use Git Flow, JIRA and SCRUM.",
+  },
+  {
+    key: 5,
     component: <TechParkLogo />,
     title: "July, 2018 - August, 2019 • 1 year and 2 months",
     text:
-      "I worked as Full Stack Developer, with backend and mobile development, in our development team I was responsible for our microservices. Our main product was a web system for driving schools, with an app for the instructor to apply the hands-on classes and then upload them to Detran. In this project I was responsible for developing the APIs in NodeJS, our MongoDB and PostgreSQL databases, with all architecture in AWS. I was also responsible for developing an app using Flutter for the student to manage their theoretical and practical classes.",
+      "I worked as a Full Stack Developer with back-end and mobile development, in our development team I was responsible for our microservices. Our main product was a web system for driving schools, with an app for the instructor to apply the hands-on classes and then upload them to Detran. In this project I was responsible for developing the APIs in NodeJS, our MongoDB and PostgreSQL databases, with all architecture in AWS. I was also responsible for developing an app using Flutter for the student to manage their theoretical and practical classes.",
   },
 ]

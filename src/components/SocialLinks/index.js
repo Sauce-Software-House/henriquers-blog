@@ -3,8 +3,8 @@ import Icons from "./Icons"
 import links from "./content"
 import * as S from "./styled"
 
-const SocialLinks = () => (
-  <S.SocialLinksWrapper>
+const SocialLinks = ({cellDisplay, deskDisplay}) => (
+  <S.SocialLinksWrapper cellDisplay={cellDisplay} deskDisplay={deskDisplay} >
     <S.SocialLinksList>
       {links.map((link, i) => {
         const Icon = Icons[link.label]

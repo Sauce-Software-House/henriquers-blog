@@ -8,6 +8,7 @@ import { configParticles } from "../config/config-particles"
 
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
+import SocialLinks from "../components/SocialLinks"
 
 import { aboutContent } from "../utils/content-about"
 
@@ -25,6 +26,10 @@ const ResponsiveRow = styled(Row)`
   ${media.lessThan("large")`
     flex-direction: column;
   `}
+`
+
+const OurParticles = styled(Particles)`
+  background: var(--background);
 `
 
 const renderAboutContent = () =>
@@ -83,10 +88,15 @@ const renderAboutContent = () =>
     </div>
   ))
 
-const AboutPage = () => (
+const AboutPage = () => {
+  return (
   <Layout>
     <SEO title="About" />
-    <Particles
+    <div style={{marginTop: '30px'}}>
+
+      <SocialLinks cellDisplay={true} />
+    </div>
+    <OurParticles
       style={{
         position: "absolute",
         zIndex: 0,
@@ -96,6 +106,6 @@ const AboutPage = () => (
     />
     {renderAboutContent()}
   </Layout>
-)
+)}
 
 export default AboutPage
