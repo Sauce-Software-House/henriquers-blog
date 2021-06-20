@@ -97,7 +97,7 @@ const AboutPage = () => {
       </div>
       <OurParticles
         style={{
-          position: 'absolute',
+          position: 'fixed',
           zIndex: 0,
           animation: 'fadein 52s'
         }}
