@@ -15,6 +15,7 @@
     "gatsby-plugin-manifest": "^2.2.31",
     "gatsby-plugin-netlify-cms": "^4.1.40",
     "gatsby-plugin-offline": "^3.0.27",
+    "gatsby-plugin-prettier-eslint": "^1.0.6",
     "gatsby-plugin-react-helmet": "^3.1.16",
     "gatsby-plugin-sharp": "^2.3.5",
     "gatsby-plugin-sitemap": "^2.2.27",
@@ -47,7 +48,13 @@
   },
   "devDependencies": {
     "cz-conventional-changelog": "3.1.0",
-    "prettier": "^1.19.1"
+    "eslint": "^7.29.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-react": "^7.24.0",
+    "prettier": "^2.3.1"
   },
   "keywords": [
     "gatsby"
@@ -63,7 +70,8 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",

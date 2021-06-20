@@ -1,7 +1,7 @@
-import React from "react"
-import * as S from "./styled"
-import links from "./content"
-import getThemeColor from "../../utils/getThemeColor"
+import React from 'react'
+import * as S from './styled'
+import links from './content'
+import getThemeColor from '../../utils/getThemeColor'
 
 const MenuLinks = () => (
   <S.MenuLinksWrapper>

@@ -1,5 +1,5 @@
-import styled from "styled-components"
-import media from "styled-media-query"
+import styled from 'styled-components'
+import media from 'styled-media-query'
 
 export const SearchWrapper = styled.section`
   background: var(--background);
@@ -17,14 +17,14 @@ export const SearchWrapper = styled.section`
   .ais-Stats {
     padding: 0.5rem 3rem;
 
-    ${media.lessThan("large")`
+    ${media.lessThan('large')`
       padding: 0.5rem 1rem;
     `}
   }
   .ais-SearchBox {
     padding-top: 6rem;
 
-    ${media.lessThan("large")`
+    ${media.lessThan('large')`
       padding-top: 1rem;
     `}
   }

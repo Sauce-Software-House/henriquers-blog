@@ -1,9 +1,9 @@
-import styled from "styled-components"
-import media from "styled-media-query"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
+import styled from 'styled-components'
+import media from 'styled-media-query'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
 
 export const MenuLinksWrapper = styled.nav`
-  ${media.lessThan("large")`
+  ${media.lessThan('large')`
     display: none;
   `}
 `

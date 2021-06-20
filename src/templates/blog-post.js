@@ -1,19 +1,14 @@
-import React, { useEffect } from "react"
-import { navigate } from "gatsby"
-import { graphql } from "gatsby"
+import React from 'react'
+import { graphql } from 'gatsby'
 
-import Layout from "../components/Layout"
-import SEO from "../components/seo"
-import RecommendedPosts from "../components/RecommendedPosts"
-import Comments from "../components/Comments"
+import Layout from '../components/Layout'
+import SEO from '../components/seo'
+import RecommendedPosts from '../components/RecommendedPosts'
+import Comments from '../components/Comments'
 
-import * as S from "../components/Post/styled"
+import * as S from '../components/Post/styled'
 
 const BlogPost = ({ data, pageContext }) => {
-  useEffect(() => {
-    navigate("/about/")
-  }, [])
-
   const post = data.markdownRemark
   const next = pageContext.nextPost
   const previous = pageContext.previousPost

@@ -6,5 +6,5 @@
 
 // You can delete this file if you're not using it
 // In your gatsby-browser.js
-import "lazysizes"
-require("prismjs/themes/prism-tomorrow.css")
+import 'lazysizes'
+require('prismjs/themes/prism-tomorrow.css')

@@ -1,19 +1,19 @@
-import React, { useState, useEffect } from "react"
-import * as Scroll from "react-scroll"
+import React, { useState, useEffect } from 'react'
+import * as Scroll from 'react-scroll'
 
 // import { Home } from "styled-icons/boxicons-solid/Home"
-import { PersonPin } from "styled-icons/material/PersonPin"
+import { PersonPin } from 'styled-icons/material/PersonPin'
 // import { SearchAlt2 as Search } from "styled-icons/boxicons-regular/SearchAlt2"
-import { UpArrowAlt as Arrow } from "styled-icons/boxicons-regular/UpArrowAlt"
-import { Lightbulb as Light } from "styled-icons/typicons/Lightbulb"
+import { UpArrowAlt as Arrow } from 'styled-icons/boxicons-regular/UpArrowAlt'
+import { Lightbulb as Light } from 'styled-icons/typicons/Lightbulb'
 // import { Grid } from "styled-icons/boxicons-solid/Grid"
 // import { ThList as List } from "styled-icons/typicons/ThList"
 
-import getThemeColor from "../../utils/getThemeColor"
+import getThemeColor from '../../utils/getThemeColor'
 
-import * as S from "./styled"
+import * as S from './styled'
 
-var scroll = Scroll.animateScroll
+const scroll = Scroll.animateScroll
 const scrollToTop = () => {
   scroll.scrollToTop()
 }
@@ -22,7 +22,7 @@ const MenuBar = () => {
   const [theme, setTheme] = useState(null)
   // const [display, setDisplay] = useState(null)
 
-  const isDarkMode = theme === "dark"
+  const isDarkMode = theme === 'dark'
   // const isListMode = display === "list"
 
   useEffect(() => {
@@ -77,7 +77,7 @@ const MenuBar = () => {
         <S.MenuBarItem
           title="Change Theme"
           onClick={() => {
-            window.__setPreferredTheme(isDarkMode ? "light" : "dark")
+            window.__setPreferredTheme(isDarkMode ? 'light' : 'dark')
           }}
           className={theme}
         >

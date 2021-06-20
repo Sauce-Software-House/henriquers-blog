@@ -1,28 +1,27 @@
-import React, { useEffect } from "react"
-import { navigate } from "gatsby"
-import { graphql } from "gatsby"
+import React from 'react'
+import { graphql } from 'gatsby'
 
-import Layout from "../components/Layout"
-import SEO from "../components/seo"
-import PostItem from "../components/PostItem"
-import Pagination from "../components/Pagination"
+import Layout from '../components/Layout'
+import SEO from '../components/seo'
+import PostItem from '../components/PostItem'
+import Pagination from '../components/Pagination'
 
-import * as S from "../components/ListWrapper/styled"
+import * as S from '../components/ListWrapper/styled'
 
 // import { initGA } from "../config/ga"
 
-const BlogList = props => {
-  useEffect(() => {
-    navigate("/about/")
-    // initGA()
-  }, [])
+const BlogList = (props) => {
+  // useEffect(() => {
+  //   navigate('/about/')
+  //   // initGA()
+  // }, [])
 
   const postList = props.data.allMarkdownRemark.edges
 
-  let { currentPage, numPages } = props.pageContext
+  const { currentPage, numPages } = props.pageContext
   const isFirst = currentPage === 1
   const isLast = currentPage === numPages
-  const prevPage = currentPage - 1 === 1 ? "/" : `/page/${currentPage - 1}`
+  const prevPage = currentPage - 1 === 1 ? '/' : `/page/${currentPage - 1}`
   const nextPage = `/page/${currentPage + 1}`
 
   return (
@@ -39,11 +38,11 @@ const BlogList = props => {
                     category,
                     date,
                     description,
-                    title,
+                    title
                   },
                   timeToRead,
-                  fields: { slug },
-                },
+                  fields: { slug }
+                }
               },
               index
             ) => (

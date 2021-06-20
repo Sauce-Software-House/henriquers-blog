@@ -1,16 +1,16 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
 
-import Avatar from "../Avatar"
-import * as S from "./styled"
+import Avatar from '../Avatar'
+import * as S from './styled'
 
-import getThemeColor from "../../utils/getThemeColor"
+import getThemeColor from '../../utils/getThemeColor'
 
 const Profile = () => {
   const {
     site: {
-      siteMetadata: { title, position, description, author },
-    },
+      siteMetadata: { title, position, description, author }
+    }
   } = useStaticQuery(graphql`
     query MySiteMetadata {
       site {

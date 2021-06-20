@@ -1,8 +1,8 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import media from "styled-media-query"
-import Img from "gatsby-image"
-import styled from "styled-components"
+import React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
+import media from 'styled-media-query'
+import Img from 'gatsby-image'
+import styled from 'styled-components'
 
 const AvatarWrapper = styled(Img)`
   border-radius: 25%;
@@ -10,7 +10,7 @@ const AvatarWrapper = styled(Img)`
   margin: auto;
   width: 4.75rem;
 
-  ${media.lessThan("large")`
+  ${media.lessThan('large')`
     height: 4.875rem;
     width: 4.875rem;
     margin-top: 2px;

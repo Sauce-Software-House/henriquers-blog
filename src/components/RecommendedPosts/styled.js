@@ -1,6 +1,6 @@
-import styled from "styled-components"
-import media from "styled-media-query"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
+import styled from 'styled-components'
+import media from 'styled-media-query'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
 
 export const RecommendedWrapper = styled.section`
   border-bottom: 1px solid var(--borders);
@@ -8,7 +8,7 @@ export const RecommendedWrapper = styled.section`
   background: var(--mediumBackground);
   display: flex;
 
-  ${media.lessThan("large")`
+  ${media.lessThan('large')`
     padding: 2rem 1rem;
     line-height: 1.3;
     font-size: .9rem;

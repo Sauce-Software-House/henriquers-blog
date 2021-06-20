@@ -1,8 +1,8 @@
-import React from "react"
-import PropTypes from "prop-types"
-import "bootstrap/dist/css/bootstrap.min.css"
+import React from 'react'
+import PropTypes from 'prop-types'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
-export default function HTML(props) {
+export default function HTML (props) {
   return (
     <html {...props.htmlAttributes}>
       <head>
@@ -63,12 +63,12 @@ export default function HTML(props) {
               }
               setDisplay(preferredDisplay || 'list');
             })();
-          `,
+          `
           }}
         />
         {props.preBodyComponents}
         <div
-          key={`body`}
+          key={'body'}
           id="___gatsby"
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
@@ -84,5 +84,5 @@ HTML.propTypes = {
   bodyAttributes: PropTypes.object,
   preBodyComponents: PropTypes.array,
   body: PropTypes.string,
-  postBodyComponents: PropTypes.array,
+  postBodyComponents: PropTypes.array
 }
