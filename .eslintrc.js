@@ -15,5 +15,10 @@ module.exports = {
   rules: {
     'react/prop-types': 0,
     'node/no-path-concat': 0
+  },
+  settings: {
+    react: {
+      version: 'detect'
+    }
   }
 }
