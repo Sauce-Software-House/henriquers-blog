@@ -26,12 +26,14 @@ export default function HTML (props) {
             __html: `
             (function() {
               window.__onThemeChange = function() {};
+
               function setTheme(newTheme) {
                 window.__theme = newTheme;
                 preferredTheme = newTheme;
                 document.body.className = newTheme;
                 window.__onThemeChange(newTheme);
               }
+
               var preferredTheme;
               try {
                 preferredTheme = localStorage.getItem('theme');
@@ -45,12 +47,14 @@ export default function HTML (props) {
               setTheme(preferredTheme || 'dark');
 
               window.__onDisplayChange = function() {};
+
               function setDisplay(newDisplay) {
                 window.__display = newDisplay;
                 preferredDisplay = newDisplay;
                 document.body.id = newDisplay;
                 window.__onDisplayChange(newDisplay);
               }
+              
               var preferredDisplay;
               try {
                 preferredDisplay = localStorage.getItem('display');

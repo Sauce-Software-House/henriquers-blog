@@ -4,6 +4,7 @@ import WillLogo from '../components/Logos/WillLogo'
 import InflorLogo from '../components/Logos/InflorLogo'
 import TechParkLogo from '../components/Logos/TechParkLogo'
 import MyAvatar from '../components/Logos/MyAvatar'
+import VizirLogo from '../components/Logos/VizirLogo'
 
 export const aboutContent = [
   {
@@ -14,6 +15,14 @@ export const aboutContent = [
   },
   {
     key: 2,
+    component: <VizirLogo />,
+    // eslint-disable-next-line quotes
+    title: `April, 2021 - Present • 4 months`,
+    text:
+      'I work as Full Stack Engineer on Vizir Bank and Natura Pay products, mainly using React / React Native / NodeJs / Micro Frontends / TypeScript / Redux / MobX / Jest / Jira / SCRUM. We are expanding the functionality of the core product (Vizir Bank) and, consequently, of NaturaPay, in addition to bringing our own features for NaturaPay to serve its consultants. I am currently more focused on mobile and backend development.'
+  },
+  {
+    key: 3,
     component: <WillLogo />,
     title: 'Dezember, 2019 - April, 2021 • 1 year and 5 months',
     text:
@@ -21,19 +30,19 @@ export const aboutContent = [
       '\nCurrently my focus is on creating new features and maintaining our new internal system. In which I participated in the entire development phase. Using React and NestJS.'
   },
   {
-    key: 3,
+    key: 4,
     component: <PagLogo />,
     title: 'Dezember, 2019 - September, 2020 • 10 months',
     text: 'I worked as a Full Stack Developer, we build web applications for internal systems with React / Node / NestJS / Redux / Ant Design / TypeScript / Less / Jest / Enzyme / Storybook / GitFlow / Jira / SCRUM. I also participate in the maintenance of internal systems using the Java ecosystem, mainly with Spring Framework. I also worked on the development of the banking application, using Flutter.'
   },
   {
-    key: 4,
+    key: 5,
     component: <InflorLogo />,
     title: 'August, 2019 - November, 2019 • 4 months',
     text: 'I worked as a Front-end Developer with development of responsive web systems for forest and agricultural management using Vue.js, Vue Router, Vuex , Vuetify and Sass. We also use Git Flow, JIRA and SCRUM.'
   },
   {
-    key: 5,
+    key: 6,
     component: <TechParkLogo />,
     title: 'July, 2018 - August, 2019 • 1 year and 2 months',
     text: 'I worked as a Full Stack Developer with back-end and mobile development, in our development team I was responsible for our microservices. Our main product was a web system for driving schools, with an app for the instructor to apply the hands-on classes and then upload them to Detran. In this project I was responsible for developing the APIs in NodeJS, our MongoDB and PostgreSQL databases, with all architecture in AWS. I was also responsible for developing an app using Flutter for the student to manage their theoretical and practical classes.'
